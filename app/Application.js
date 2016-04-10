@@ -28,7 +28,7 @@ Ext.define('BK.Application', {
                 duration:1000,
                 remove:true
            });
-            Ext.widget('login-dialog');
+      //      Ext.widget('login-dialog');
 
            //Fade out icon and image
 

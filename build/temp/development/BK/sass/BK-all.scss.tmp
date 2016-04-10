@@ -1,8 +1,9 @@
 $app-name:  dynamic( 'BK' );
-$image-search-path: 'C:/Users/bsoutherland/dev/apache/Apache24/htdocs/bkmasterjs/build/development/BK/classic/resources';
+$image-search-path: 'C:/Users/bsoutherland/dev/apache/Apache24/htdocs/bkmovies/build/development/BK/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-bk-application: dynamic(true);;
 $include-bk-store-personnel: dynamic(true);;
+$include-bk-view-login-capslocktooltip: dynamic(true);;
 $include-bk-view-login-login: dynamic(true);;
 $include-bk-view-login-logincontroller: dynamic(true);;
 $include-bk-view-main-list: dynamic(true);;

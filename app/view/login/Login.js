@@ -17,7 +17,6 @@ Ext.define('BK.view.login.Login',{
 	draggable:false,
 	resizable:false,
 	controller:'login',
-
 	items:[
 		{
 			xtype:'form',
@@ -30,7 +29,11 @@ Ext.define('BK.view.login.Login',{
 				allowBlank:false,
 				vtype: 'alphanum',
 				minLength: 3,
-				msgTarget: 'under'
+				msgTarget: 'under',
+				listeners:{
+					specialKey: 'onTextFieldSpecialKey'
+				}
+				
 			},
 			items:[
 				{
@@ -39,12 +42,17 @@ Ext.define('BK.view.login.Login',{
 					maxLength: 25
 				},
 				{
+					id:'password',
+					enableKeyEvents:true,
 					inputType:'password',
-					name: 'password',
 					fieldLabel: 'Password',
 					maxLength: 15,
 				//	vtype: 'customPass',
-					msgTarget: 'side'
+					msgTarget: 'side',
+					listeners: {
+					    keypress: 'onTextFieldKeyPress'
+					}
+					
 				}
 			],
 			dockedItems:[
