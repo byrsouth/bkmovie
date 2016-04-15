@@ -1,5 +1,5 @@
 Ext.define('BK.view.login.Login',{
-	extend: 'Ext.window.Window',
+    extend: 'Ext.window.Window',
 	xtype:'login-dialog',
 	autoShow: true,
 	height:180,
@@ -50,9 +50,9 @@ Ext.define('BK.view.login.Login',{
 				//	vtype: 'customPass',
 					msgTarget: 'side',
 					listeners: {
-					    keypress: 'onTextFieldKeyPress'
+					    keypress: 'onTextFieldKeyPress',
+					    specialKey:'onTextFieldSpecialKey'
 					}
-					
 				}
 			],
 			dockedItems:[

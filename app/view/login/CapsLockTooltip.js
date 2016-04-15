@@ -16,6 +16,6 @@ Ext.define('BK.view.login.CapsLockTooltip', {
     html: '<div>Having Caps Lock on may cause you to enter ' +
         'your password incorrectly.</div><br/>' +
         '<div>You should press Caps Lock to turn it off ' +
-        'before entering your password.</div>'
+        '<strong>before</strong> entering your password.</div>'
 	
 });

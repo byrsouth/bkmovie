@@ -1,14 +1,18 @@
 <?php 
-$server = "127.0.0.1";
-$user = "matrix";
-$pass = "";
-$dbName = "test";
+$servername = "localhost";
+$username = "root";
+$password = "P@$$word";
+try{
+    $db = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'P@$$word');
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$mysqli = new mysqli($server, $user, $pass, $dbName);
 
-/* check connection */
-if ($mysqli->connect_errno) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}
+
+}catch(PDOException $e){
+ printf( "Connection failed: " . $e->getMessage());
+ }
+
+
+
+
 ?>
