@@ -15,7 +15,9 @@ Ext.define('BK.view.main.Main', {
         'BK.view.main.Panel',
         'BK.view.main.MainController',
         'BK.view.main.MainModel',
-        'BK.view.main.List'
+        'BK.view.main.List',
+        'BK.view.main.Header',
+        'BK.view.main.Footer'
     ],
 
     controller: 'main',
@@ -35,7 +37,8 @@ Ext.define('BK.view.main.Main', {
             xtype:'mainpanel'
         },{
             region:'north',
-            xtype:'appheader'
+           xtype:'appheader'
+
         },{
             region:'south',
             xtype:'appfooter'

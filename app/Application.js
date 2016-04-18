@@ -3,6 +3,34 @@
  * calls Ext.application(). This is the ideal place to handle application launch and
  * initialization details.
  */
+ function loadLocale(){
+
+
+     var lang = localStorage ? (localStorage.getItem('user-lang') || 'en') : 'en',
+        file = Ext.util.Format.format("/ext/classic/locale/overrides/{0}/ext-locale-{0}.js", lang);
+        Ext.Loader.loadScript({url: file, onError: function(){
+         alert(file + ' Error loading locale file. Please contact system administrator.');
+     },
+     onLoad(){
+         alert(file += ' File Loaded.');
+
+     }
+     });
+
+
+ }
+
+ loadLocale();
+
+
+Ext.require('Ext.layout.container.Fit');
+Ext.require('Ext.form.Panel');
+Ext.require('Ext.layout.container.Border');
+Ext.require('Ext.layout.container.Center');
+
+
+
+
 Ext.require('BK.view.login.Login');
 Ext.require('BK.view.main.Main');
 Ext.define('BK.Application', {
@@ -28,7 +56,7 @@ Ext.define('BK.Application', {
                 duration:1000,
                 remove:true
            });
-      //      Ext.widget('login-dialog');
+          // Ext.widget('login-dialog');
 
            //Fade out icon and image
 

@@ -12028,3 +12028,13 @@ div.x-border-layout-ct {
     top: 30px;
     right: -24px;
 }
+/* http://localhost:1841/classic/sass/src/view/main/Footer.scss:3 */
+.app-footer-title {
+    color: #0b67c4;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* http://localhost:1841/classic/sass/src/view/main/Footer.scss:9 */
+.app-footer {
+    border-top: 1px solid #07417c;
+}

@@ -4,6 +4,7 @@ Ext.define('BK.view.login.LoginController', {
 	alias : 'controller.login',
 	requires : [ 'BK.view.login.CapsLockTooltip' ],
 
+
 	onTextFieldSpecialKey : function(field, e, options) {
 		if (e.getKey() === e.ENTER) {
 			this.doLogin();
@@ -86,6 +87,9 @@ Ext.define('BK.view.login.LoginController', {
 		this.getView().close();
 
 		Ext.create('BK.view.main.Main');
+	},
+
+	onLogout:function(){
 	},
 
 	doLogin : function() {

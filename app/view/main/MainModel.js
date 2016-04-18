@@ -6,11 +6,12 @@ Ext.define('BK.view.main.MainModel', {
 
     alias: 'viewmodel.main',
 
-    data: {
-        name: 'BK',
-
-        loremIpsum: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-    }
+     data: {
+            name: 'BK', //#4
+            appName: 'DVD Rental Store', //#5
+            appHeaderIcon: '<span class="fa fa-desktop fa-lg app-header-logo">', //#6
+            footer: 'Mastering ExtJS book - Loiane Groner - http://packtpub.com' //#7
+        }
 
     //TODO - add data, formulas and/or methods to support your view
 });

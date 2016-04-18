@@ -6,6 +6,21 @@
  * updated to 2.2 by Condor (8 Aug 2008)
  */
 Ext.onReady(function() {
+ var   translations = {
+    login: "Login",
+    user: "User",
+    password: "Password",
+
+    cancel: "Cancel",
+    submit: "Submit",
+    logout: 'Logout',
+
+    capsLockTitle: 'Caps Lock is On',
+    capsLockMsg1: 'Having Caps Lock on may cause you to ',
+    capsLockMsg2: 'enter your password incorrectly.',
+    capsLockMsg3: 'You should press Caps Lock to turn it ',
+    capsLockMsg4: 'off before entering your password.'
+};
 
     if (Ext.data && Ext.data.Types) {
         Ext.data.Types.stripRe = /[\$,%]/g;

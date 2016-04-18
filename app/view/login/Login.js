@@ -5,13 +5,15 @@ Ext.define('BK.view.login.Login',{
 	height:180,
 	width:360,
 	requires: [
-	           'BK.view.login.LoginController'
+	           'BK.view.login.LoginController',
+	           'BK.view.locale.Translation'
+
 	],
 	layout:{
 		type:'fit'
 	},
 	iconCLs:'fa fa-key fa-lg',
-	title:'BKMovie Login',
+	title:translations.login,
 	closeAction:'hide',
 	closable:false,
 	draggable:false,
@@ -36,16 +38,17 @@ Ext.define('BK.view.login.Login',{
 				
 			},
 			items:[
+
 				{
 					name: 'user',
-					fieldLabel: 'User',
+					fieldLabel: translations.user,
 					maxLength: 25
 				},
 				{
 					id:'password',
 					enableKeyEvents:true,
 					inputType:'password',
-					fieldLabel: 'Password',
+					fieldLabel: translations.password,
 					maxLength: 15,
 				//	vtype: 'customPass',
 					msgTarget: 'side',
@@ -60,13 +63,16 @@ Ext.define('BK.view.login.Login',{
 					xtype:'toolbar',
 					dock:'bottom',
 					items:[
-						{
+					  {
+					    xtype:'translation'
+					   },
+					   {
 							xtype:'tbfill'
 						},
 						{
 							xtype:'button',
 							iconCls:'fa fa-times fa-lg',
-							text:'Cancel',
+							text:translations.cancel,
 							listeners: {
 								click:'onButtonClickedCancel'
 							}
@@ -75,7 +81,7 @@ Ext.define('BK.view.login.Login',{
 							xtype:'button',
 							formBind:true,
 							iconCls:'fa fa-sign-in fa-lg',
-							text: 'Submit',
+							text: translations.submit,
 							listeners:{
 								click:'onButtonClickedSubmit'
 							}

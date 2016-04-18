@@ -1,7 +1,7 @@
 Ext.define('BK.view.main.Footer',{
 
     extend:'Ext.container.Container',
-    xtpye:'appfooter',
+    xtype:'appfooter',
     cls:'app-footer',
     height:30,
     layout:'center',

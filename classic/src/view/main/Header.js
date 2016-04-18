@@ -3,7 +3,7 @@ Ext.define('BK.view.main.Header',{
     xtype:'appheader',
 
     requires:[
-        'BK.view.locale.Translation'
+       'BK.view.locale.Translation'
     ],
 
     ui:'footer',
@@ -11,19 +11,21 @@ Ext.define('BK.view.main.Header',{
     items:[{
             xtype:'component',
             bind:{
-                html:'appHeaderIcon'
+                html:'{appHeaderIcon}'
             }
         },{
             xtype:'component',
             componentCls:'app-header-title',
             bind:{
-                html:'appName'
+                html:'{appName}'
             }
         },{
             xtype:'tbfill'
-        },{
+        },
+        {
             xtype:'translation'
-        },{
+        },
+        {
             xtype:'tbseparator'
         },{
             xtype:'button',
@@ -35,5 +37,4 @@ Ext.define('BK.view.main.Header',{
             }
         }
     ]
-
-};)
+});
