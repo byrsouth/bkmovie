@@ -11,7 +11,7 @@
         Ext.Loader.loadScript({url: file, onError: function(){
          alert(file + ' Error loading locale file. Please contact system administrator.');
      },
-     onLoad(){
+     onLoad: function(){
          alert(file += ' File Loaded.');
 
      }

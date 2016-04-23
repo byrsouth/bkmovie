@@ -1,4 +1,5 @@
 <?php
+/*
 require("../db/db.php"); // #1
 $userName = $_POST['user']; // #4
 $pass = $_POST['password']; // #5
@@ -21,6 +22,7 @@ if($data){
 
 $db = null;
 
-
+*/
+ $result['success'] = true;
 echo json_encode($result);
 ?>

@@ -30,7 +30,7 @@ Ext.define('BK.view.main.Header',{
         },{
             xtype:'button',
             itemId:'logout',
-            reference:'logout',
+            reference:'Logout',
             iconCls:'fa fa-sign-out fa-lg buttonIcon',
             listeners:{
                 click:'onLogout'

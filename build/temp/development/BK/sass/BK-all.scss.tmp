@@ -3,6 +3,8 @@ $image-search-path: 'C:/Users/bsoutherland/dev/apache/Apache24/htdocs/bkmovie/bu
 $theme-name:  dynamic( 'theme-triton' );
 $include-bk-application: dynamic(true);;
 $include-bk-store-personnel: dynamic(true);;
+$include-bk-view-locale-translation: dynamic(true);;
+$include-bk-view-locale-translationcontroller: dynamic(true);;
 $include-bk-view-login-capslocktooltip: dynamic(true);;
 $include-bk-view-login-login: dynamic(true);;
 $include-bk-view-login-logincontroller: dynamic(true);;
@@ -1350,5 +1352,5 @@ $BK-resource-path: 'images' !default;
 $current-package: false;
 $current-resource-root: $BK-resource-root;
 $relative-image-path-for-uis: $BK-resource-path;
-@import '../../../../../classic/sass/src/view/main/Main';
-@import '../../../../../classic/sass/src/view/main/Footer';
+@import '../../../../../sass/src/view/main/Footer';
+@import '../../../../../sass/src/view/main/Main';
