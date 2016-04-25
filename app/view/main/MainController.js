@@ -8,14 +8,29 @@ Ext.define('BK.view.main.MainController', {
     extend: 'Ext.app.ViewController',
 
     alias: 'controller.main',
+    requires: ['BK.util.Util'],
 
-    onItemSelected: function (sender, record) {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+    onLogout: function (){
+        var me  = this;
+        Ext.Ajax.request({
+            url:'php/security/logout.php',
+            scope:me,
+            success:'onLogoutSuccess',
+            failure:'onLogoutFailure'
+        });
+    },
+    onLogoutFailure: function(conn, response, options, eOpts){
+     BK.util.Util.showErrorMsg(conn.responseText);
     },
 
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            //
-        }
+    onLogoutSuccess: function(conn, response, options, eOpts){
+        var result =  BK.util.Util.decodeJSON(conn.responseText);
+            if(result.success){
+                this.getView().destroy();
+                window.location.reload();
+            }else{
+                 BK.util.Util.showErrorMsg(result.msg);
+            }
     }
+
 });

@@ -3,7 +3,7 @@ Ext.define('BK.view.locale.TranslationController',{
     alias:'controller.translation',
     init:function(){
         var lang= localStorage ? (localStorage.getItem('user-lang') || 'en'):'en',
-            button = this.getView();
+         button = this.getView();
 
         button.setIconCls(lang);
         if(lang =='en'){
@@ -13,5 +13,13 @@ Ext.define('BK.view.locale.TranslationController',{
         }else{
             button.setText('Portugues');
         }
+    },
+
+    onMenuItemClick:function(item, e, options){
+     var menu = this.getView();
+     menu.setIconCls(item.iconCls);
+     menu.setText(item.text);
+     localStorage.setItem("user-lang", item.iconCls);
+     window.location.reload();
     }
 });

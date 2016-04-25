@@ -24,9 +24,7 @@ Ext.define('BK.view.main.Main', {
     viewModel: 'main',
 
     ui: 'navigation',
-    tabBarHeaderPosition: 1,
-    titleRotation: 0,
-    tabRotation: 0,
+
     layout:{
         type:'border'
     },
@@ -36,13 +34,14 @@ Ext.define('BK.view.main.Main', {
             region:'center',
             xtype:'mainpanel'
         },{
-            region:'north',
+           region:'north',
            xtype:'appheader'
 
         },{
             region:'south',
             xtype:'appfooter'
-        },{
+        },
+        {
             xtype:'container',
             region:'west',
             width:'200',

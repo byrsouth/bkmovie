@@ -1,7 +1,7 @@
 Ext.define('BK.view.locale.Translation',{
   extend:'Ext.button.Split',
     requires: [
-    'BK.view.locale.TranslationController'
+   'BK.view.locale.TranslationController'
     ],
 
     controller: 'translation',
@@ -9,6 +9,7 @@ Ext.define('BK.view.locale.Translation',{
     xtype:'translation',
     menu:{
         xtype:'menu',
+        defaults:{listeners:{click:'onMenuItemClick'}},
         items:[
             {
                 xtype:'menuitem',

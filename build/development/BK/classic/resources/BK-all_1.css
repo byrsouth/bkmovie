@@ -5085,13 +5085,34 @@
 .fa-percent:before {
     content: "\f295";
 }
-/* http://localhost:1841/sass/etc/all.scss:8 */
+/* http://localhost:1841/sass/etc/flagIcons.scss:1 */
+.pt_BR {
+    background-image: url('images/app/flags/br.png') !important;
+}
+/* http://localhost:1841/sass/etc/flagIcons.scss:5 */
+.en {
+    background-image: url('images/app/flags/en.png') !important;
+}
+/* http://localhost:1841/sass/etc/flagIcons.scss:9 */
+.es {
+    background-image: url('images/app/flags/es.png') !important;
+}
+/* http://localhost:1841/sass/etc/iconColors.scss:4 */
+.tabIcon {
+    color: #0b67c4;
+}
+/* http://localhost:1841/sass/etc/iconColors.scss:8 */
+.buttonIcon {
+    color: #fff;
+}
+/* http://localhost:1841/sass/etc/all.scss:11 */
 .x-mask.splashscreen {
+    /*@import "fix";*/
     /** loading screen */
     background-color: white;
     opacity: 1;
 }
-/* http://localhost:1841/sass/etc/all.scss:13 */
+/* http://localhost:1841/sass/etc/all.scss:16 */
 .x-mask-msg.splashscreen,
 .x-mask-msg.splashscreen div {
     font-size: 16px;
@@ -5101,37 +5122,11 @@
     background-color: transparent;
     background-position: top center;
 }
-/* http://localhost:1841/sass/etc/all.scss:25 */
+/* http://localhost:1841/sass/etc/all.scss:28 */
 .x-message-box .x-window-body .x-box-inner {
     min-height: 110px !important;
 }
-/* http://localhost:1841/sass/etc/all.scss:29 */
-.x-splash-icon {
-    background-image: url('images/app/packt-logo.png') !important;
-    margin-top: -30px;
-    height: 70px;
-}
-/* http://localhost:1841/classic/sass/etc/all.scss:9 */
-.x-mask.splashscreen {
-    /** loading screen */
-    background-color: white;
-    opacity: 1;
-}
-/* http://localhost:1841/classic/sass/etc/all.scss:14 */
-.x-mask-msg.splashscreen,
-.x-mask-msg.splashscreen div {
-    font-size: 16px;
-    font-weight: bold;
-    padding: 30px 5px 5px 5px;
-    border: none;
-    background-color: transparent;
-    background-position: top center;
-}
-/* http://localhost:1841/classic/sass/etc/all.scss:26 */
-.x-message-box .x-window-body .x-box-inner {
-    min-height: 110px !important;
-}
-/* http://localhost:1841/classic/sass/etc/all.scss:30 */
+/* http://localhost:1841/sass/etc/all.scss:32 */
 .x-splash-icon {
     background-image: url('images/app/packt-logo.png') !important;
     margin-top: -30px;

@@ -6,16 +6,20 @@
  function loadLocale(){
 
 
+
      var lang = localStorage ? (localStorage.getItem('user-lang') || 'en') : 'en',
-        file = Ext.util.Format.format("/ext/classic/locale/overrides/{0}/ext-locale-{0}.js", lang);
+     //   file = Ext.util.Format.format("/ext/classic/locale/overrides/{0}/ext-locale-{0}.js", lang);
+          file = Ext.util.Format.format("resources/locale/{0}.js", lang);
         Ext.Loader.loadScript({url: file, onError: function(){
          alert(file + ' Error loading locale file. Please contact system administrator.');
      },
      onLoad: function(){
-         alert(file += ' File Loaded.');
+//         alert(file += ' File Loaded.');
 
      }
      });
+    var extJsFile = Ext.util.Format.format("ext/packages/ext-locale/build/ext-locale-{0}.js", lang);
+    Ext.Loader.loadScript({url: extJsFile});
 
 
  }

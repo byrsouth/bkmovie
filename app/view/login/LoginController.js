@@ -2,7 +2,7 @@ Ext.define('BK.view.login.LoginController', {
 
 	extend : 'Ext.app.ViewController',
 	alias : 'controller.login',
-	requires : [ 'BK.view.login.CapsLockTooltip' ],
+	requires : [ 'BK.view.login.CapsLockTooltip','BK.util.Util'],
 
 
 	onTextFieldSpecialKey : function(field, e, options) {
@@ -47,38 +47,20 @@ Ext.define('BK.view.login.LoginController', {
 	onLoginFailure : function(form, action) {
 		this.getView().unmask();
 		this.getView().close();
-		var result = action.response.responseText; //#3
+		var result = BK.util.Util.decodeJSON(action.response.responseText); //#3
 
-		if (!result) { //#4
-			result = {};
-			result.success = false;
-			result.msg = action.response.responseText;
-		}
+
 
 		switch (action.failureType) {
 		case Ext.form.action.Action.CLIENT_INVALID: //#5
-			Ext.Msg.show({
-				title : 'Error!',
-				msg : 'Form fields may not be submitted with invalid values',
-				icon : Ext.Msg.ERROR,
-				buttons : Ext.Msg.OK
-			});
+		    BK.util.Util.showErrorMsg('Form fields may not be submitted with invalid values');
 			break;
 		case Ext.form.action.Action.CONNECT_FAILURE: //#6
-			Ext.Msg.show({
-				title : 'Connection Error!',
-				msg : 'Form fields may not be submitted with invalid values',
-				icon : Ext.Msg.ERROR,
-				buttons : Ext.Msg.OK
-			});
+		    BK.util.Util.showErrorMsg(action.response.responseText);
+
 			break;
 		case Ext.form.action.Action.SERVER_INVALID: //#7
-			Ext.Msg.show({
-				title : 'Error!',
-				msg : result.msg, //#8
-				icon : Ext.Msg.ERROR,
-				buttons : Ext.Msg.OK
-			});
+		   BK.util.Util.showErrorMsg(result.msg);
 		}
 	},
 
