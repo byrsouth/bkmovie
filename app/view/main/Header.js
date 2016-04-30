@@ -6,9 +6,10 @@ Ext.define('BK.view.main.Header',{
        'BK.view.locale.Translation'
     ],
 
-    ui:'footer',
+  ui:'footer',
 
-    items:[{
+    items:[
+        {
             xtype:'component',
             bind:{
                 html:'{appHeaderIcon}'
@@ -19,7 +20,8 @@ Ext.define('BK.view.main.Header',{
             bind:{
                 html:'{appName}'
             }
-        },{
+        },
+        {
             xtype:'tbfill'
         },
         {
@@ -27,10 +29,11 @@ Ext.define('BK.view.main.Header',{
         },
         {
             xtype:'tbseparator'
-        },{
+        },
+        {
             xtype:'button',
             itemId:'logout',
-            reference:'Logout',
+            reference:'logout',
             iconCls:'fa fa-sign-out fa-lg buttonIcon',
             listeners:{
                 click:'onLogout'
